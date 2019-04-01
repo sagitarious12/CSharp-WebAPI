@@ -1,0 +1,15 @@
+.viewContainer{
+  padding: 16px 32px;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+form{
+  max-width: 500px;
+}
+
+mat-row:hover{
+  background: #f0f0f0;
+}

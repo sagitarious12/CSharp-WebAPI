@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{41A87821-C236-43A5-8789-7751BF13AD4D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+    <Files>
+      <File FileName="Models/CompanyModel.cs" Line="8" Column="29" />
+      <File FileName="Controllers/CompanyController.cs" Line="48" Column="1" />
+      <File FileName="Services/CompanyService.cs" Line="6" Column="1" />
+      <File FileName="appsettings.json" Line="3" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Web-API-Test" expanded="True">
+            <Node name="Web-API-Test" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Web-API-Test PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

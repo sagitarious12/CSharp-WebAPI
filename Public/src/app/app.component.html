@@ -1,0 +1,76 @@
+<div class="mat-app-background">
+  <mat-card class="mat-elevation-z4">
+    <button mat-button [matMenuTriggerFor]="menu" class="mat-primary">Companies</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="currentView = 0">GET</button>
+      <button mat-menu-item (click)="currentView = 1">POST</button>
+    </mat-menu>
+  </mat-card>
+
+  <div *ngIf="currentView == 0" class="viewContainer">
+
+    <mat-table [dataSource]="datasource" class="mat-primary mat-elevation-z2">
+
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> ID. </mat-header-cell>
+        <mat-cell *matCellDef="let company"> {{company.id}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name. </mat-header-cell>
+        <mat-cell *matCellDef="let company"> {{company.name}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="select(row)"></mat-row>
+
+    </mat-table>
+
+  </div>
+
+  <div *ngIf="currentView == 1" class="viewContainer">
+
+    <form [formGroup]="addCompany">
+
+      <mat-form-field>
+        <input matInput formControlName="name" placeholder="Company Name">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field>
+        <input matInput formControlName="id" placeholder="Company ID">
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <br>
+      <button mat-button color="primary" (click)="saveCompany()">Save Company</button>
+
+    </form>
+
+  </div>
+
+  <div *ngIf="currentView == 2" class="viewContainer">
+
+    <form [formGroup]="addCompany">
+
+      <mat-form-field>
+        <input matInput formControlName="name" placeholder="Company Name">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field>
+        <input matInput formControlName="id" placeholder="Company ID">
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+      <br>
+      <button mat-button color="primary" (click)="updateCompany()">Update Company</button>
+      <button mat-button color="warn" (click)="deleteCompany()">Delete Company</button>
+
+    </form>
+
+  </div>
+
+</div>
